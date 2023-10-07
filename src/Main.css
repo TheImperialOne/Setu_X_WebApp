@@ -1,0 +1,133 @@
+/* Main.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+
+  
+.left-div {
+    background-image: url('lefts.png'); /* Specify the URL of your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 90vh;
+    z-index: 1;
+  }
+
+  .login-link {
+    color: #587171; /* Set the color to #587171 */
+  }
+ 
+  .left-div .content2 {
+  align-items: center;
+  padding-top: 20vh;
+  }
+
+
+.right-div {
+    background-color: white;
+    border-radius: 3%;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-right: -5vh;
+    margin-left: -5vh;
+  }
+  
+  .content2 {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .google-button,
+  .facebook-button,
+  .create-account-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #587171;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-text {
+    margin-top: 20px;
+  }
+  
+.left-div h1{
+    padding-top: 100px;
+    padding-left: 10vh;
+    color: azure;
+}
+  
+ 
+
+  
+  .column{
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    height: 100vh; 
+    overflow: hidden; /* Hide the scrollbar */
+    
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .transparent-button {
+    padding: 10px 20px;
+    margin: 30px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #587171;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-icon {
+    margin-right: 10px;
+  }
+
+  /* Hide scrollbars in Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #587171; /* Set the color of the thumb (the draggable part) */
+    border-radius: 4px; /* Add a border radius for a rounded look */
+  }
+  
+  /* Style scrollbar in Firefox */
+  /* Set the width and color of the scrollbar */
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #587171 transparent;
+  }
+  
+  /* Style the thumb (the draggable part) */
+  .scrollbar-thumb {
+    background-color: #587171;
+    border-radius: 4px;
+  }
+  

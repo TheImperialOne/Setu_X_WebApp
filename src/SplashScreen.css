@@ -1,0 +1,20 @@
+/* SplashScreen.css */
+
+.splash-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Set the background color to white */
+  }
+  
+  .logo {
+    max-width: 200px; /* Adjust the size as needed */
+  }
+  
+  .splash-text {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: 20px; /* Adjust the spacing between the logo and text */
+  }
+  
