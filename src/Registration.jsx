@@ -30,6 +30,7 @@ const Registration = () => {
         email,
         password
       );
+
       const user = userCredential.user;
 
       // Registration successful, userCredential.user contains user info
@@ -46,8 +47,8 @@ const Registration = () => {
         password,
       };
       await setDoc(userRef, userData);
-
-      navigate("/dashboard");
+      alert("Accout Created! ");
+      navigate("/Main");
     } catch (error) {
       // Handle registration error
       console.error("Error creating user:", error);
@@ -130,7 +131,7 @@ const Registration = () => {
                 Create Account
               </button>
               <p className="login-link">
-                Already have an account? <Link to="/login">Login</Link>
+                Already have an account? <Link to="/Main">Login</Link>
               </p>
             </form>
           </div>

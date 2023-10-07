@@ -5,7 +5,7 @@ import Registration from "./Registration";
 import Dashboard from "./Dashboard";
 import Main from "./Main";
 import "./App.css";
-import Login from "./Login";
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
         <Route path="/Main" element={<Main />} />
         <Route path="/Registration" element={<Registration />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
