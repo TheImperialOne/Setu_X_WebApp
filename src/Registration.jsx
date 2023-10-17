@@ -8,18 +8,18 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
-  const [hospitalName, setHospitalName] = useState("");
-  const [registrationNo, setRegistrationNo] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [retypePassword, setRetypePassword] = useState("");
+  const [HospitalName, setHospitalName] = useState("");
+  const [Registration, setRegistrationNo] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [RetypePassword, setRetypePassword] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
-      if (password !== retypePassword) {
+      if (Password !== RetypePassword) {
         alert("Passwords do not match.");
         return;
       }
@@ -27,8 +27,8 @@ const Registration = () => {
       // Create the user in Firebase Authentication
       const userCredential = await createUserWithEmailAndPassword(
         auth,
-        email,
-        password
+        Email,
+        Password
       );
 
       const user = userCredential.user;
@@ -39,12 +39,12 @@ const Registration = () => {
       // Create a user record in Firestore
       const userId = user.uid;
       const db = getFirestore();
-      const userRef = doc(db, "users", userId);
+      const userRef = doc(db, "Hospitals", userId);
       const userData = {
-        hospitalName,
-        registrationNo,
-        email,
-        password,
+        HospitalName: HospitalName,
+        Registration: Registration,
+        Email: Email,
+        Password: Password,
       };
       await setDoc(userRef, userData);
       alert("Accout Created! ");
@@ -77,8 +77,8 @@ const Registration = () => {
                 <input
                   type="text"
                   id="registrationNo"
-                  name="registrationNo"
-                  value={registrationNo}
+                  name="Registration"
+                  value={Registration}
                   onChange={(e) => setRegistrationNo(e.target.value)}
                   required
                 />
@@ -88,8 +88,8 @@ const Registration = () => {
                 <input
                   type="text"
                   id="hospitalName"
-                  name="hospitalName"
-                  value={hospitalName}
+                  name="HospitalName"
+                  value={HospitalName}
                   onChange={(e) => setHospitalName(e.target.value)}
                   required
                 />
@@ -99,8 +99,8 @@ const Registration = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  value={email}
+                  name="Email"
+                  value={Email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
@@ -110,8 +110,8 @@ const Registration = () => {
                 <input
                   type="password"
                   id="password"
-                  name="password"
-                  value={password}
+                  name="Password"
+                  value={Password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
@@ -121,8 +121,8 @@ const Registration = () => {
                 <input
                   type="password"
                   id="retypePassword"
-                  name="retypePassword"
-                  value={retypePassword}
+                  name="RetypePassword"
+                  value={RetypePassword}
                   onChange={(e) => setRetypePassword(e.target.value)}
                   required
                 />
