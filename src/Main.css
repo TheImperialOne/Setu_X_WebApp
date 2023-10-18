@@ -20,10 +20,13 @@ html, body {
     color: #587171; /* Set the color to #587171 */
 }
 
-.left-div .content2 {
+.left-div .content1 {
     align-items: center;
-    padding-top: 20vh;
+    margin-top: 20vh;
+    margin-left: 15vh;
+
 }
+
 
 
 .right-div {
@@ -41,9 +44,11 @@ html, body {
 
 .content2 {
     text-align: center;
-    padding: 20px;
+    margin-top: 80vh;
 }
-
+form{
+    margin: auto;
+}
 .google-button,
 .facebook-button,
 .create-account-button {

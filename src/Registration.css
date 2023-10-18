@@ -9,7 +9,7 @@
     align-items: center;
     min-height: 100vh; /* Use min-height to ensure the page takes up at least the viewport height */
     background-color: #587171;
-
+    border-radius: 3%;
 }
 
 form {
@@ -65,9 +65,16 @@ label {
     margin-right: 10px;
 }
 
+.login-link1 {
+text-decoration: none;
+    color: #355e6e;
+}
 .login-link {
 
-    color: #355e6e;
+        color: #355e6e;
+    }
+.login-link1:hover{
+    text-decoration:underline;
 }
 
 input {
@@ -140,4 +147,6 @@ input[type="password"] {
 .login-text a:hover {
     text-decoration: underline;
 }
-  
+  .column{
+    overflow: hidden;
+  }
