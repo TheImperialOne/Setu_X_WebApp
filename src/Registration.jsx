@@ -75,7 +75,7 @@ const Registration = () => {
               <div className="input-group">
                 <label htmlFor="registrationNo">Registration Number</label>
                 <input
-                  type="text"
+                  type="number"
                   id="registrationNo"
                   name="Registration"
                   value={Registration}
